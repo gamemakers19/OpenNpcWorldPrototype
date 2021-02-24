@@ -25,6 +25,8 @@ public class AttackDefinition : ScriptableObject
         if (defender != null)
             baseDamage -= defender.GetArmor().GetValue();
 
+        if (baseDamage < 0)
+            baseDamage = 0;
         return new Attack((int)baseDamage, isCritical);
     }
 }

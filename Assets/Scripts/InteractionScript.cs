@@ -91,7 +91,7 @@ public class InteractionScript : MonoBehaviour
             yield return new WaitForSeconds(4);
         }
 
-        Debug.Log("Conversation ended by" + gameObject.name);
+        //Debug.Log("Conversation ended by" + gameObject.name);
         isFirst = false;
         isTalking = false;
 
@@ -117,7 +117,7 @@ public class InteractionScript : MonoBehaviour
                             isFirst = true;
                             script.isTalking = true;
                             script.isFirst = false;
-                            Debug.Log("Conversation started by " + gameObject.name);
+                            //Debug.Log("Conversation started by " + gameObject.name);
                         }
                     }
                 }

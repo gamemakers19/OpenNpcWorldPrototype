@@ -100,7 +100,7 @@ public class Inventory : MonoBehaviour
             tempSlot.transform.SetParent(InventoryItemPanel);
         }
         InventoryStatusTextField.text = "Carrying : " + GetInventoryWeight() + ", Capacity : " + CarryCapacity.ToString();
-        Debug.Log(InventoryEquipPanel.transform.childCount);
+        //Debug.Log(InventoryEquipPanel.transform.childCount);
         // Refresh the equip panel
         for (int i=0; i < InventoryEquipPanel.transform.childCount; i++)
         {
@@ -338,7 +338,7 @@ public class Inventory : MonoBehaviour
 
     public bool CanEquipItem(ItemData Itemdata, int EquipIndex)
     {
-        switch (EquipIndex)
+        /*switch (EquipIndex)
         {
             case 0:
                 return Itemdata.Item is HelmetItem;
@@ -351,8 +351,9 @@ public class Inventory : MonoBehaviour
             case 4:
                 return Itemdata.Item is ShoeItem;
             default: break;
-        }
-        return false;
+        }*/
+        EquipableItem temp = (EquipableItem)Itemdata.Item;
+        return (int)temp.EquipType == EquipIndex;
     }
 
     public void UseItem(ItemData Itemdata)

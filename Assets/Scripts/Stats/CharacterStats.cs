@@ -8,37 +8,22 @@ public class CharacterStats : MonoBehaviour
     public Stat Damage;
     public Stat Armor;
 
+    public Weapon weapon;
     void Awake()
     {
         currentHealth = new Stat();
         currentHealth.SetValue(maxHealth.GetValue());
     }
 
-    void Update()
+    public void TakeDamage(GameObject attacker, float damage)
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDamage(10.0f);
-        }
-    }
-
-    public void TakeDamage(float damage)
-    {
+        /*
         damage -= Armor.GetValue();
+        */
 
         if (damage > 0.0f)
             currentHealth.SetValue(currentHealth.GetValue() - damage);
-        //Debug.Log(transform.name + " takes " + damage + " damage");
-
-        if (currentHealth.GetValue() <= 0.0f)
-        {
-            Die();
-        }
-    }
-
-    public virtual void Die()
-    {
-        Debug.Log(transform.name + " died");
+        Debug.Log(transform.name + " takes " + damage + " damage");
     }
 
     public Stat GetArmor()
@@ -49,5 +34,22 @@ public class CharacterStats : MonoBehaviour
     public Stat GetDamage()
     {
         return Damage;
+    }
+
+    public Stat GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+
+    public Stat GetMaxHealth()
+    {
+        return maxHealth;
+    }
+    public Weapon GetWeapon()
+    {
+        if (weapon != null)
+            return weapon;
+        else
+            return null;
     }
 }

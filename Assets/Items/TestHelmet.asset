@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74cbbc67e8fb91845bef45d65df9de56, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a8c640423a72274d9e5f3b3f11cedb3, type: 3}
   m_Name: TestHelmet
   m_EditorClassIdentifier: 
   ItemId: 4
@@ -18,6 +18,7 @@ MonoBehaviour:
   bCanTake: 1
   bCanDrop: 1
   Weight: 1
-  ItemMesh: {fileID: 4300002, guid: d13b23452d2513642bbee06d75de3fb0, type: 3}
-  ItemMaterial: {fileID: 2100000, guid: 3e4d7427d7a88294cb0c94d082e2d2af, type: 2}
+  ItemMesh: {fileID: 4300000, guid: a1afca6b316ba08449970020d3f132cf, type: 3}
+  ItemMaterial: {fileID: 2100000, guid: 958b88f9268508e4f95f9d407b822990, type: 2}
   ItemImage: {fileID: 0}
+  EquipType: 0

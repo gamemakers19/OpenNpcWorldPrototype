@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f2c7dc15894d24fb2eab570476fef8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a8c640423a72274d9e5f3b3f11cedb3, type: 3}
   m_Name: TestWeapon
   m_EditorClassIdentifier: 
   ItemId: 7
@@ -17,7 +17,12 @@ MonoBehaviour:
   Description: This is a weapon
   bCanTake: 1
   bCanDrop: 1
-  Weight: 2
+  Weight: 0
   ItemMesh: {fileID: 4300000, guid: 8048c1f5000214742a1e0a457b039d11, type: 3}
   ItemMaterial: {fileID: 2100000, guid: d7d5e72666737d040ba68a6bfc9d685a, type: 2}
   ItemImage: {fileID: 0}
+  EquipType: 3
+  damageModifier: 0
+  armorModifier: 0
+  healthModifier: 0
+  weapon: {fileID: 11400000, guid: 6b7a1b511b51a39459835067d72647f9, type: 2}

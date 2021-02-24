@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bd0dd531db73f1419ca3fb90bcecf72, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a8c640423a72274d9e5f3b3f11cedb3, type: 3}
   m_Name: TestShield
   m_EditorClassIdentifier: 
-  ItemId: 5
+  ItemId: 6
   ItemName: TestShield
   Description: This is a shield
   bCanTake: 1
   bCanDrop: 1
-  Weight: 0.5
-  ItemMesh: {fileID: 4300000, guid: aa14a5ce723a25249a57d63d9f70fef6, type: 3}
-  ItemMaterial: {fileID: 2100000, guid: cd7481125ba8a8242ace03065324d6e7, type: 2}
+  Weight: 0
+  ItemMesh: {fileID: 4300000, guid: 21015743ec869444fa7abb0b7fbbbfaf, type: 3}
+  ItemMaterial: {fileID: 2100000, guid: 0f0efd26481f4d64ba787c94cca13d4d, type: 2}
   ItemImage: {fileID: 0}
+  EquipType: 2

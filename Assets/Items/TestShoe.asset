@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56563d83301d2af4382143d736ec9c81, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a8c640423a72274d9e5f3b3f11cedb3, type: 3}
   m_Name: TestShoe
   m_EditorClassIdentifier: 
-  ItemId: 6
+  ItemId: 5
   ItemName: TestShoe
   Description: This is a shoe
   bCanTake: 1
   bCanDrop: 1
-  Weight: 0.5
-  ItemMesh: {fileID: 4300000, guid: 23d80b1447aa2424cbcc30f7785b14d4, type: 3}
-  ItemMaterial: {fileID: -8469494145858465668, guid: 23d80b1447aa2424cbcc30f7785b14d4,
-    type: 3}
+  Weight: 0
+  ItemMesh: {fileID: 4300000, guid: 31692247927af9b40b91420604f82870, type: 3}
+  ItemMaterial: {fileID: 2100000, guid: a8bc6f9ef949b6f4e960a46cc1de32a7, type: 2}
   ItemImage: {fileID: 0}
+  EquipType: 4

@@ -4,41 +4,50 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {    
     public Animator anim;
-    public AttackDefinition demoAttack;
+    public AttackDefinition Attack;
     public CharacterStats stats;
+    public float attackCooldown = 0f;
 
     void Awake()
     {
         stats = GetComponent<CharacterStats>();
     }
 
+    void Update()
+    {
+        if (attackCooldown > 0)
+            attackCooldown -= Time.deltaTime;
+    }
     public void AttackTarget(GameObject target)
     {
-        /*
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Input.GetMouseButtonDown(0) && canAttack)
+        if (attackCooldown <= 0)
         {
-            anim.SetBool("isAttacking", true);
-            StartCoroutine(AttackCooldown());
-            
-            if (Physics.Raycast(ray, out hit, 3))
+            if (stats.GetWeapon() != null)
             {
-                if (hit.transform.gameObject.CompareTag("Enemy"))
+                if (stats.GetWeapon().type == WeaponType.LongRange)
                 {
-                    hit.transform.gameObject.GetComponent<Health>().Damage(attackPoint);
+                    stats.GetWeapon().ExecuteAttack(gameObject, gameObject.transform.position + new Vector3(0, 0.4f, 0), gameObject.transform.rotation, LayerMask.NameToLayer("Player Projectile"));
+                }
+                else
+                {
+                    stats.GetWeapon().ExecuteAttack(gameObject, target);
                 }
             }
-        }
-        */
-        var attack = demoAttack.CreateAttack(stats, target.GetComponent<CharacterStats>());
+            else
+            {
+                var attack = Attack.CreateAttack(stats, target.GetComponent<CharacterStats>());
 
-        var attackables = target.GetComponentsInChildren(typeof(IAttackable));
+                var attackables = target.GetComponentsInChildren(typeof(IAttackable));
 
-        foreach (IAttackable attackable in attackables)
-        {
-            attackable.OnAttack(gameObject, attack);
+                foreach (IAttackable attackable in attackables)
+                {
+                    attackable.OnAttack(gameObject, attack);
+                }
+            }
+            if (stats.GetWeapon() != null)
+                attackCooldown = stats.GetWeapon().Cooldown;
+            else
+                attackCooldown = Attack.Cooldown;
         }
     }
 

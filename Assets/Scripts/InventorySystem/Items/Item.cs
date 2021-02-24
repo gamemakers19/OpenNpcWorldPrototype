@@ -36,18 +36,6 @@ public class Item : ScriptableObject
         this.ItemImage = i.ItemImage;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     // Implement custom behaviour when the item is used to reap its benefits
     virtual public void OnItemUsed()
     {

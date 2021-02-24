@@ -188,9 +188,11 @@ GameObject:
   - component: {fileID: 7176504838547576364}
   - component: {fileID: 1928269307111726560}
   - component: {fileID: -3937936013646344853}
-  - component: {fileID: 8014432740741994580}
   - component: {fileID: 4575109230519276086}
   - component: {fileID: 3138425072226794443}
+  - component: {fileID: 3119983497678077428}
+  - component: {fileID: 2164559594005086327}
+  - component: {fileID: -757223329705075394}
   m_Layer: 8
   m_Name: NPC
   m_TagString: Npc
@@ -307,33 +309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03893eb6426c5c042a4c5b4f45a5ea84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8014432740741994580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2650718596372849520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d7e0f226160d4469887a091630eb6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4575109230519276086}
-        m_TargetAssemblyTypeName: CharacterStats, Assembly-CSharp
-        m_MethodName: TakeDamage
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &4575109230519276086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +327,7 @@ MonoBehaviour:
     BaseValue: 0
   Armor:
     BaseValue: 0
+  weapon: {fileID: 0}
 --- !u!114 &3138425072226794443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +344,44 @@ MonoBehaviour:
   isTalking: 0
   isFirst: 0
   Dialogue: 0
+--- !u!114 &3119983497678077428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650718596372849520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5748e25707fe84948abf213f67c9fc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2164559594005086327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650718596372849520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d9f03e37946714ea59b42ced30e575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-757223329705075394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650718596372849520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0878a6514421504cb31d5f236c13b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: {fileID: -5152427970590384675, guid: c906b44c49a8ab54c8fdbd4dcb517075, type: 3}
+  color: {r: 1, g: 0.7837778, b: 0, a: 1}
 --- !u!1 &6334920163691629673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1595,7 @@ GameObject:
   - component: {fileID: 8103033540630317302}
   - component: {fileID: 8103033540638041942}
   - component: {fileID: 4761375624122382681}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PT_Medieval_Male_Peasant_01_d
   m_TagString: Untagged
   m_Icon: {fileID: 0}

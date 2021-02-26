@@ -18,6 +18,10 @@ public class PlayerActions : MonoBehaviour
     [Header("Assigned automatically")]
     public GameObject InteractableObject;
 
+    public GameObject QuestUiWindow;
+    private bool questWindowActive = false;
+    public Quest quest;
+
     private void Awake()
     {
         SetSleepPanelState(false);
@@ -46,6 +50,7 @@ public class PlayerActions : MonoBehaviour
                 dialogue.transform.eulerAngles = new Vector3(rot.x, dialogue.transform.eulerAngles.y, rot.z);
                 dialogue.say("Hello there. How are you");
             }
+            QuestWindowToggle();
         }
     }
 
@@ -84,5 +89,24 @@ public class PlayerActions : MonoBehaviour
     {
         InteractableObject.GetComponentInChildren<Bed>().ChooseSleep(inputField.GetComponentInChildren<AmountField>().Amount, this);
         SetSleepPanelState(false);
+    }
+
+    private void QuestWindowToggle()
+    {
+        if (Input.GetKeyDown(KeyCode.X) && questWindowActive == false)
+        {
+
+            QuestUiWindow.SetActive(true);
+            questWindowActive = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+        else if (Input.GetKeyDown(KeyCode.X) && questWindowActive == true)
+        {
+            QuestUiWindow.SetActive(false);
+            questWindowActive = false;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }

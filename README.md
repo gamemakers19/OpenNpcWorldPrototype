@@ -1,8 +1,8 @@
 <img src="https://github.com/gamemakers19/OpenNpcWorldPrototype/blob/develop/MainScene-Unity2020LTS.png" />
  
 <h1>OpenNpcWorldPrototype ReadMe.md #text From Main-Fork:</h1>
-https://github.com/leader1stMan/OpenNpcWorldPrototype <pre># <-- github main HEAD is develop!</pre>
-<span># GameVideo: https://www.youtube.com/channel/UCwo94Yu3nPXTYHo3DuDA5Vg # Using_Unity3D_Assets:
+https://github.com/leader1stMan/OpenNpcWorldPrototype # <-- github main HEAD is develop!</pre>
+<span>https://www.youtube.com/channel/UCwo94Yu3nPXTYHo3DuDA5Vg #<-- GameVideo: # Using_Unity3D_Assets:
 <br/>https://assetstore.unity.com/packages/tools/game-toolkits/third-person-controller-basic-locomotion-free-82048 
 <br/>https://assetstore.unity.com/packages/3d/characters/humanoids/humans/lowpoly-medieval-peasants-free-pack-122225 
 <br/>https://assetstore.unity.com/packages/3d/characters/village-houses-pack-63695 
